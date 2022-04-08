@@ -1,7 +1,3 @@
-fn new_pixel_buffer(rows:usize, cols: usize) -> Vec<u8> {
-    vec![0; rows * cols]
-}
-
 fn main() {
     let mut primes = vec![2,3,5,7];
     assert_eq!(primes.iter().product::<i32>(), 210);
@@ -25,4 +21,18 @@ fn main() {
     palindrome.reverse();
     // Reasonable yet disappointing:
     assert_eq!(palindrome, vec!["panama", "a canal", "a plan", "a man"]);
+
+    let mut v = Vec::with_capacity(2);
+    assert_eq!(v.len(), 0);
+    assert_eq!(v.capacity(), 2);
+
+    v.push(1);
+    v.push(2);
+    assert_eq!(v.len(), 2);
+    assert_eq!(v.capacity(), 2);
+
+    v.push(3);
+    assert_eq!(v.len(), 3);
+    // Typically prints "capacity is now 4":
+    println!("capacity is now{}", v.capacity());
 }
