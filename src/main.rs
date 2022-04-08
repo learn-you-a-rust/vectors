@@ -45,4 +45,9 @@ fn main() {
     //Remove the element at 1.
     v.remove(1);
     assert_eq!(v, [10, 30, 35, 40, 50]);
+
+    let mut v = vec!["Snow Puff", "Glass Gem"];
+    assert_eq!(v.pop(), Some("Glass Gem"));
+    assert_eq!(v.pop(), Some("Snow Puff"));
+    assert_eq!(v.pop(), None);
 }
