@@ -34,5 +34,11 @@ fn main() {
     v.push(3);
     assert_eq!(v.len(), 3);
     // Typically prints "capacity is now 4":
-    println!("capacity is now{}", v.capacity());
+    println!("capacity is now {}", v.capacity());
+
+    let mut v = vec![10, 20, 30, 40, 50];
+
+    //Make the element at index 3 be 35.
+    v.insert(3, 35);
+    assert_eq!(v, [10,20, 30, 35, 40, 50]);
 }
