@@ -10,4 +10,10 @@ fn main() {
     primes.push(13);
     assert_eq!(primes.iter().product::<i32>(), 30030);
 
+    let mut pal = Vec::new();
+    pal.push("step");
+    pal.push("on");
+    pal.push("no");
+    pal.push("pets");
+    assert_eq!(pal, vec!["step", "on", "no", "pets"]);
 }
