@@ -16,4 +16,7 @@ fn main() {
     pal.push("no");
     pal.push("pets");
     assert_eq!(pal, vec!["step", "on", "no", "pets"]);
+
+    let v: Vec<i32> = (0..5).collect();
+    assert_eq!(v, [0,1,2,3,4]);
 }
