@@ -41,4 +41,8 @@ fn main() {
     //Make the element at index 3 be 35.
     v.insert(3, 35);
     assert_eq!(v, [10,20, 30, 35, 40, 50]);
+
+    //Remove the element at 1.
+    v.remove(1);
+    assert_eq!(v, [10, 30, 35, 40, 50]);
 }
