@@ -19,4 +19,10 @@ fn main() {
 
     let v: Vec<i32> = (0..5).collect();
     assert_eq!(v, [0,1,2,3,4]);
+
+    // A palindrome!
+    let mut palindrome = vec!["a man", "a plan", "a canal", "panama"];
+    palindrome.reverse();
+    // Reasonable yet disappointing:
+    assert_eq!(palindrome, vec!["panama", "a canal", "a plan", "a man"]);
 }
